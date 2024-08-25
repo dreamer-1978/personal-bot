@@ -5,8 +5,8 @@ import cors from "cors";
 
 const app = express();
 app.use(cors());
-// app.use(express.json());
-// app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 const PORT = 3000;
 const optionCors = {
@@ -14,12 +14,12 @@ const optionCors = {
 };
 
 const TOKEN = process.env.VITE_BOT_TOKEN;
-const bot = new Bot(process.env.VITE_BOT_TOKEN);
+const bot = new Bot(TOKEN);
 
 app.post(`/${bot.token}`, webhookCallback(bot, "express"));
 
 app.get("/", cors(optionCors), (req, res) => {
-  res.send(`Server is Running! create Token: ${TOKEN}`);
+  res.send(`Server is Running!`);
 });
 
 bot.command("start", (ctx) => ctx.reply("Welcome! Up and running."));
