@@ -14,15 +14,15 @@ const optionCors = {
   origin: "*"
 }
 
-const TOKEN = process.env.BOT_TOKEN;
+// const TOKEN = process.env.BOT_TOKEN;
 
-console.log(TOKEN)
+
 // const bot = new Bot(TOKEN);
 //api.telegram.org/bot7344528094:AAFHZ5zofbZkdU9TX5fs4IWbpGIBPYBlcm0/deleteWebhook?url=
 // app.use(webhookCallback(bot, "express"));
 
 app.get("/", cors(optionCors), async (req, res) => {
-  await res.send(`Server is Running! create Token: ${TOKEN}`);
+  await res.send(`Server is Running! create Token: ${process.env.BOT_TOKEN}`);
 });
 
 // bot.command("start", async (ctx) => {
