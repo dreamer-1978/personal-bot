@@ -8,6 +8,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+const endpoint = "https://personal-bot-bice.vercel.app";
 const PORT = 3000;
 const optionCors = {
   origin: "*",
@@ -16,7 +17,7 @@ const optionCors = {
 const TOKEN = process.env.VITE_BOT_TOKEN;
 const bot = new Bot(TOKEN);
 
-app.post(`/${bot.token}`, webhookCallback(bot, "express"));
+app.post(`/`, webhookCallback(bot, "express"));
 
 app.get("/", cors(optionCors), (req, res) => {
   res.send(`Server is Running!`);
