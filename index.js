@@ -22,7 +22,7 @@ console.log(TOKEN)
 // app.use(webhookCallback(bot, "express"));
 
 app.get("/", cors(optionCors), async (req, res) => {
-  await res.send("...Server is Running...");
+  await res.send(`Server is Running! create Token: ${TOKEN}`);
 });
 
 // bot.command("start", async (ctx) => {
