@@ -13,12 +13,13 @@ const optionCors = {
   origin: "*",
 };
 
+const TOKEN = process.env.VITE_BOT_TOKEN;
 const bot = new Bot(process.env.VITE_BOT_TOKEN);
 
 app.post(`/${bot.token}`, webhookCallback(bot, "express"));
 
 app.get("/", cors(optionCors), (req, res) => {
-  res.send(`Server is Running! create Token:`);
+  res.send(`Server is Running! create Token: ${TOKEN}`);
 });
 
 bot.command("start", (ctx) => ctx.reply("Welcome! Up and running."));
