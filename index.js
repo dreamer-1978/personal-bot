@@ -17,7 +17,7 @@ const optionCors = {
 
 
 
-const bot = new Bot(process.env.VITE_BOT_TOKEN);
+const bot = new Bot("7344528094:AAFHZ5zofbZkdU9TX5fs4IWbpGIBPYBlcm0");
 
 //api.telegram.org/bot7344528094:AAFHZ5zofbZkdU9TX5fs4IWbpGIBPYBlcm0/deleteWebhook?url=
 app.use(webhookCallback(bot, "express"));
