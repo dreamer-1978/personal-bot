@@ -17,7 +17,7 @@ const TOKEN = process.env.BOT_TOKEN;
 // if (!TOKEN) throw new Error("Token not Found!");
 const bot = new Bot(TOKEN);
 //api.telegram.org/bot7344528094:AAFHZ5zofbZkdU9TX5fs4IWbpGIBPYBlcm0/deleteWebhook?url=
-app.use(webhookCallback(bot, "express"));
+// app.use(webhookCallback(bot, "express"));
 
 app.get("/", (req, res) => {
   res.send("...Server is Running...");
