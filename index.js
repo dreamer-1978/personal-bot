@@ -17,7 +17,7 @@ const optionCors = {
 const TOKEN = process.env.BOT_TOKEN;
 
 console.log(TOKEN)
-const bot = new Bot(TOKEN);
+// const bot = new Bot(TOKEN);
 //api.telegram.org/bot7344528094:AAFHZ5zofbZkdU9TX5fs4IWbpGIBPYBlcm0/deleteWebhook?url=
 // app.use(webhookCallback(bot, "express"));
 
