@@ -20,7 +20,7 @@ const optionCors = {
 const bot = new Bot("7344528094:AAFHZ5zofbZkdU9TX5fs4IWbpGIBPYBlcm0");
 
 //api.telegram.org/bot7344528094:AAFHZ5zofbZkdU9TX5fs4IWbpGIBPYBlcm0/deleteWebhook?url=
-app.use(webhookCallback(bot, "express"));
+// app.use(webhookCallback(bot, "express"));
 
 app.get("/", cors(optionCors), (req, res) => {
   res.send(`Server is Running! create Token:`);
