@@ -12,7 +12,7 @@ const app = express()
 const PORT = 3000
 
 
-// const TOKEN = process.env.BOT_TOKEN;
+const TOKEN = process.env.BOT_TOKEN;
 
 // if (!TOKEN) throw new Error("Token not Found!");
 // const bot = new Bot(TOKEN);
