@@ -3,8 +3,8 @@ import {
   InlineKeyboard,
   webhookCallback,
 } from "grammy";
-import express from 'express';
 import "dotenv/config";
+import express from 'express';
 import cors from 'cors';
 
 const app = express()
@@ -14,10 +14,11 @@ const optionCors = {
   origin: "*"
 }
 
-// const TOKEN = process.env.VITE_BOT_TOKEN;
+
 
 
 const bot = new Bot(process.env.VITE_BOT_TOKEN);
+
 //api.telegram.org/bot7344528094:AAFHZ5zofbZkdU9TX5fs4IWbpGIBPYBlcm0/deleteWebhook?url=
 app.use(webhookCallback(bot, "express"));
 
