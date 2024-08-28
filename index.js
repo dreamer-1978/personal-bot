@@ -129,8 +129,8 @@ bot.hears(/gpt/, async (ctx) => {
 //   await ctx.reply(`Вы нажали кнопку ${ctx.callbackQuery.data}`);
 // })
 
-// app.listen(PORT, () => {
-//   console.log(`Server is running on port ${PORT}`);
-// });
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
 
 // bot.start();
