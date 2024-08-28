@@ -86,7 +86,7 @@ https: bot.command("usd", async (ctx) => {
   });
 });
 
-bot.hears(/???/, async (ctx) => {
+bot.hears(/Ответь/, async (ctx) => {
   const content = ctx.message.text
   if (content) {
     const response = await axios("https://giga-chat-teal.vercel.app/data", {
